@@ -1,3 +1,9 @@
+body{
+    font-family: Helvetica, sans-serif;
+    height: vh;
+    background: linear-gradient(180deg, var(--bg_secondary) 0%, var(--bg_secondary) 15%, var(--bg_primary) 15%, var(--bg_primary) 100%);
+}
+
 :root{
     --bg_primary: #dadbd2;
     --bg_secondary: #009688;
@@ -39,4 +45,10 @@ img{
 
 .banner .text_banner{
     line-height: 1rem;
+}
+
+.search{
+    background-color: var(--grey_lighter);
+
+
 }
