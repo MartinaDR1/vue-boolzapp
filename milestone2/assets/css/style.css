@@ -117,6 +117,9 @@ img{
     position: relative;
 }
 
+.active_chat{
+    line-height: 0.5rem;
+}
 .time{
     font-size: .7rem;
     position: absolute;
