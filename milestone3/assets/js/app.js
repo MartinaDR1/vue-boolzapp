@@ -16,7 +16,8 @@ createApp({
     data() {
         return {
             activeContact:0,
-            
+            newMessage:'',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -186,6 +187,15 @@ createApp({
         clickContact(index){
             console.log('click');
             this.activeContact = index
+        },
+        addNewMessage(){
+            if(! this.newMessage == ''){
+                this.contacts[this.activeContact].messages.push({
+                    message: this.newMessage,
+                    status: 'sent'
+                })
+            }
+            this.newMessage=''
         }
     }
 }).mount('#app')
