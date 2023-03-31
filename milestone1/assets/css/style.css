@@ -14,6 +14,7 @@ body{
 }
 
 .my_container{
+    max-width: 1152px;
     width: 80%;
     margin: auto;
     height: 95vh; 
@@ -23,15 +24,16 @@ img{
     width: 50px;
 }
 
+.grey_dark{
+    color: var(--grey_dark);
+}
+
 /*Left*/
 .header_left{
     background-color: var(--grey_lighter);
     align-items: center;
 }
 
-.grey_dark{
-    color: var(--grey_dark);
-}
 
 /*Banner*/
 .banner{
@@ -49,6 +51,18 @@ img{
 
 .search{
     background-color: var(--grey_lighter);
+}
 
+.contacts_list{
+    overflow-y: auto;
+    max-height: 450px;
+}
 
+.info_contact{
+    padding-left: 1rem;
+    line-height: 0.5rem;
+}
+
+.avatar:hover{
+    background-color: var(--grey_lighter);
 }
