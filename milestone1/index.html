@@ -19,7 +19,7 @@
 <body>
     <div id="app">
 
-        <div class="my_container d-flex my-3">
+        <div class="my_container d-flex py-3">
             <div class="left col-4 ">
                 <div class="header_left d-flex justify-content-between p-2">
                     <div class="my_avatar">
@@ -41,34 +41,82 @@
                     <div class="text_banner mx-2">
                         <span><strong>Ricevi notifiche di nuovi messaggi</strong></span>
 
-                        <a href="" class="d-block fw-light ">Attiva notifiche Desktop</a>
+                        <a href="" class="d-block fw-light fs-0_8">Attiva notifiche Desktop</a>
                     </div>
                 </div>
                 
                 <div class="search p-1">
                     <div class="input-group ">
-                        <span class="input-group-text bg-white rounded-0 px-4" id="basic-addon1"><i class="fa-solid fa-magnifying-glass grey_dark"></i></span>
-                        <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        <span class="input-group-text bg-white rounded-0 px-4 " id="basic-addon1"><i class="fa-solid fa-magnifying-glass grey_dark"></i></span>
+                        <input type="text" class="form-control rounded-0 fs-0_8" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
 
-                <div class="contacts_list bg-light">
+                <div class="contacts_list bg-light justify-content-between">
                    <div class="avatar d-flex border p-2 " v-for="contact in contacts" >
                         <img :src="contact.avatar"  class="rounded-circle" alt="">
                
                         <div class="info_contact" >
                             <h6><strong>{{contact.name}}</strong></h6>
-                            <span class="grey_dark">Ultimo messaggio inviato</span>
+                            <span class="grey_dark fs-0_8">Ultimo messaggio inviato</span>
+                            <span class="grey_dark fs-0_8 time_contact">12:00</span>
                         </div>
-                   </div>
-                   <div class="info"></div>
+                    </div>
+                 
                 </div>
             </div>
 
 
 
 
-            <div class="right col-8 border"></div>
+            <div class="right col-8 border">
+
+                <header class="header_right d-flex justify-content-between">
+                    <div class="my_contact p-2 d-flex">
+                        <img class="rounded-circle" src="./assets/img/avatar_1.jpg" alt="">
+
+                        <div class="info_contact" >
+                            <h6><strong>Michele</strong></h6>
+                            <span class="grey_dark fs-0_8">Ultimo accesso oggi alle 12:00</span>
+                        </div>
+                    </div>
+
+                    <div class="icon grey_dark">
+                        <i class="fa-solid fa-magnifying-glass mx-2"></i>
+                        <i class="fa-solid fa-paperclip mx-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                    </div>
+                </header>
+                
+                <main class="box_message my-2">
+                    <div class="my_message box p-2 mb-2"> 
+                        <span>Hai portato a spasso il cane?</span>
+                        <span class="grey_dark time ">15:30</span>
+                    </div>
+
+                    <div class="my_message box p-2 mb-2"> 
+                        <span>Ricordati di stendere i panni</span>
+                        <span class="grey_dark time ">15:50</span>
+                    </div>
+
+                    <div class="box bg-white p-2 mb-2"> 
+                        <span>Tutto fatto</span>
+                        <span class="grey_dark time ">16:15</span>
+                    </div>
+                </main>
+
+                <footer class="d-flex p-2">
+                    <div class="icon_emoticon px-4 mt-2">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="input_area w-100">
+                        <input type="text" class="w-100 p-2 rounded-2 border-light" placeholder="Scrvi un messaggio">
+                    </div>
+                    <div class="icon-rec px-3 mt-2">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
 
