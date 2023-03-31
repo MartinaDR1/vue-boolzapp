@@ -1,0 +1,42 @@
+:root{
+    --bg_primary: #dadbd2;
+    --bg_secondary: #009688;
+    --grey_lighter: #eaeaea;
+    --grey_dark: #b1b1b1;
+    --banner: #8edafc;
+    --my_message: #d5f9ba;
+}
+
+.my_container{
+    width: 80%;
+    margin: auto;
+    height: 95vh; 
+}
+
+img{
+    width: 50px;
+}
+
+/*Left*/
+.header_left{
+    background-color: var(--grey_lighter);
+    align-items: center;
+}
+
+.grey_dark{
+    color: var(--grey_dark);
+}
+
+/*Banner*/
+.banner{
+    background-color: var(--banner);
+    align-items: center;
+}
+
+.banner i{
+    color: var(--banner);
+}
+
+.banner .text_banner{
+    line-height: 1rem;
+}

@@ -17,7 +17,46 @@
     <title>Boolzapp</title>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+
+        <div class="my_container d-flex my-3">
+            <div class="left col-4 ">
+                <div class="header_left d-flex justify-content-between p-2">
+                    <div class="my_avatar">
+                        <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="">
+                        <span class="fw-semibold">Sofia</span>
+                    </div>
+                    
+                    <div class="grey_dark">
+                        <i class="fa-solid fa-circle-notch mx-2"></i>
+                        <i class="fa-solid fa-message mx-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                    </div>
+                </div>
+
+                <div class="banner d-flex p-2 ">
+                    <div class="banner_icon">
+                        <i class="fa-solid fa-bell-slash fa-5 border rounded-circle p-2 my-2 bg-light"></i>
+                    </div>
+                    <div class="text_banner mx-2">
+                        <span class="fw-semibold">Ricevi notifiche di nuovi messaggi</span>
+
+                        <a href="" class="d-block fw-light ">Attiva notifiche Desktop</a>
+                    </div>
+                </div>
+                
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text bg-white rounded-0 px-4" id="basic-addon1"><i class="fa-solid fa-magnifying-glass grey_dark"></i></span>
+                    <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+
+
+
+
+            <div class="right col-8 border"></div>
+        </div>
+    </div>
 
 
 
