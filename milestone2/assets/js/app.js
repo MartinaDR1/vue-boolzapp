@@ -177,5 +177,11 @@ createApp({
                 }
             ]
         }
+    },
+    methods:{
+        clickContact(index){
+            console.log('click');
+            this.activeContact = index
+        }
     }
 }).mount('#app')

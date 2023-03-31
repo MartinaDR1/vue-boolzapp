@@ -12,6 +12,7 @@ body{
     --banner: #8edafc;
     --my_message: #d5f9ba;
     --bg_footer:#f3eeea;
+    --active_chat:#e9ebeb;
 }
 
 .my_container{
@@ -40,6 +41,11 @@ img{
 
 .fs-0_8{
     font-size: 0.8rem;
+}
+
+.avatar.active
+{
+	background-color: var(--active_chat);
 }
 
 /*Left*/
@@ -73,7 +79,7 @@ img{
     max-height: 450px;
 }
 
-.info_contact{
+.contact{
     padding-left: 1rem;
     line-height: 0.5rem;
     width: 100%;

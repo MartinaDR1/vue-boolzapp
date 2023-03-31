@@ -20,6 +20,7 @@
     <div id="app">
 
         <div class="my_container d-flex py-3">
+
             <div class="left col-4 ">
                 <div class="header_left d-flex justify-content-between p-2">
                     <div class="my_avatar">
@@ -53,20 +54,20 @@
                 </div>
 
                 <div class="contacts_list bg-light justify-content-between">
-                   <div class="avatar d-flex border p-2 " v-for="contact in contacts" >
-                        <img :src="contact.avatar"  class="rounded-circle" alt="">
-               
-                        <div class="info_contact" >
-                            <h6><strong>{{contact.name}}</strong></h6>
-                            <span class="grey_dark fs-0_8">Ultimo messaggio inviato</span>
-                            <span class="grey_dark fs-0_8 time_contact">12:00</span>
+                    <div class="avatar d-flex border py-2" :class="activeContact === index ? 'active' : ''"  v-for="(contact,index) in contacts">
+                       <div class="contact d-flex" @click="clickContact(index)">
+                            <img :src="contact.avatar"  class="rounded-circle" alt="">
+
+                            <div class="info_contact p-2">
+                                <h6><strong>{{contact.name}}</strong></h6>
+                                <span class="grey_dark fs-0_8">Ultimo messaggio inviato</span>
+                                <span class="grey_dark fs-0_8 time_contact">12:00</span>
+                            </div>
                         </div>
                     </div>
                  
                 </div>
             </div>
-
-
 
 
             <div class="right col-8 border">
@@ -93,7 +94,7 @@
                         <span>{{element.message}}</span>
                         <span class="grey_dark time ">15:30</span>
                     </div>
-                    
+
                     <!-- 
                     <div class="my_message box p-2 mb-2"> 
                         <span>Hai portato a spasso il cane?</span>
