@@ -191,12 +191,14 @@ createApp({
         addNewMessage(){
             if(! this.newMessage == ''){
                 this.contacts[this.activeContact].messages.push({
+                    date: '10/01/2020 15:30:55',
                     message: this.newMessage,
                     status: 'sent'
                 })
 
                 this.aswer= setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
+                        date: '10/01/2020 15:30:55',
                         message: 'ok!',
                         status: 'received'
                     })
