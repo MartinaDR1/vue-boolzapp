@@ -203,6 +203,6 @@ createApp({
                 }, 1000);
             }
             this.newMessage=''
-        }
+        },
     }
 }).mount('#app')

@@ -92,7 +92,7 @@
                 <main class="box_message my-2">
                     <div class="box p-2 mb-2" :class="element.status === 'sent' ? 'my_message' : 'riceved_message'" v-for="(element, index) in contacts[activeContact].messages"> 
                         <span>{{element.message}}</span>
-                        <span class="grey_dark time ">15:30</span>
+                        <span class="grey_dark time ">{{element.date.slice(11,16)}}</span>
                     </div>
 
                     <!-- 
@@ -118,7 +118,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="input_area w-100">
-                        <input type="text" class="w-100 p-2 rounded-2 border-light" placeholder="Scrvi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage()">
+                        <input type="text" class="w-100 p-2 rounded-2 border-light" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage()">
                     </div>
                     <div class="icon-rec px-3 mt-2">
                         <i class="fa-solid fa-microphone"></i>
