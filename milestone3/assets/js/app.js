@@ -194,6 +194,13 @@ createApp({
                     message: this.newMessage,
                     status: 'sent'
                 })
+
+                this.aswer= setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push({
+                        message: 'ok!',
+                        status: 'received'
+                    })
+                }, 1000);
             }
             this.newMessage=''
         }
