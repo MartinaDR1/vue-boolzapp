@@ -73,10 +73,10 @@
 
                 <header class="header_right d-flex justify-content-between">
                     <div class="my_contact p-2 d-flex">
-                        <img class="rounded-circle" src="./assets/img/avatar_1.jpg" alt="">
+                        <img class="rounded-circle" :src="contacts[activeContact].avatar" alt="contacts[activeContact].name">
 
                         <div class="info_contact" >
-                            <h6><strong>Michele</strong></h6>
+                            <h6><strong>{{contacts[activeContact].name}}</strong></h6>
                             <span class="grey_dark fs-0_8">Ultimo accesso oggi alle 12:00</span>
                         </div>
                     </div>
@@ -89,6 +89,12 @@
                 </header>
                 
                 <main class="box_message my-2">
+                    <div class="box p-2 mb-2" :class="element.status === 'sent' ? 'my_message' : 'riceved_message'" v-for="(element, index) in contacts[activeContact].messages"> 
+                        <span>{{element.message}}</span>
+                        <span class="grey_dark time ">15:30</span>
+                    </div>
+                    
+                    <!-- 
                     <div class="my_message box p-2 mb-2"> 
                         <span>Hai portato a spasso il cane?</span>
                         <span class="grey_dark time ">15:30</span>
@@ -103,6 +109,7 @@
                         <span>Tutto fatto</span>
                         <span class="grey_dark time ">16:15</span>
                     </div>
+                    -->
                 </main>
 
                 <footer class="d-flex p-2">
