@@ -49,12 +49,12 @@
                 <div class="search p-1">
                     <div class="input-group ">
                         <span class="input-group-text bg-white rounded-0 px-4 " id="basic-addon1"><i class="fa-solid fa-magnifying-glass grey_dark"></i></span>
-                        <input type="text" class="form-control rounded-0 fs-0_8" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control rounded-0 fs-0_8" placeholder="Cerca o inizia una nuova chat" v-model="search" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
 
-                <div class="contacts_list bg-light justify-content-between">
-                    <div class="avatar d-flex border py-2" :class="activeContact === index ? 'active' : ''"  v-for="(contact,index) in contacts">
+                <div class="contacts_list bg-light justify-content-between" >
+                    <div class="avatar d-flex border py-2" :class="activeContact === index ? 'active' : '',  contact.name.toLowerCase().includes(search) ? '' : 'd-none'"  v-for="(contact,index) in contacts">
                        <div class="contact d-flex" @click="clickContact(index)">
                             <img :src="contact.avatar"  class="rounded-circle" alt="">
 

@@ -22,6 +22,7 @@ createApp({
         return {
             activeContact:0,
             newMessage:'',
+            search: '',
 
             contacts: [
                 {
@@ -211,5 +212,7 @@ createApp({
             }
             this.newMessage=''
         },
+       
     }
+    
 }).mount('#app')
