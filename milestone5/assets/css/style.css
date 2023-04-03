@@ -1,0 +1,136 @@
+body{
+    font-family: Helvetica, sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--bg_secondary) 15%, var(--bg_primary) 15%, var(--bg_primary) 100%);
+}
+
+:root{
+    --bg_primary: #dadbd2;
+    --bg_secondary: #009688;
+    --grey_lighter: #eaeaea;
+    --grey_dark: #b1b1b1;
+    --banner: #8edafc;
+    --my_message: #d5f9ba;
+    --bg_footer:#f3eeea;
+    --active_chat:#e9ebeb;
+}
+
+.my_container{
+    max-width: 1152px;
+    width: 80%;
+    margin: auto;
+    height: 95vh; 
+}
+
+img{
+    width: 50px;
+}
+
+.grey_dark{
+    color: var(--grey_dark);
+}
+
+.my_message{
+    background-color: var(--my_message);
+    margin-left: 26rem;
+}
+
+.riceved_message{
+    background-color: white;
+}
+
+.fs-0_8{
+    font-size: 0.8rem;
+}
+
+.avatar.active
+{
+	background-color: var(--active_chat);
+}
+
+/*Left*/
+.header_left,
+.header_right{
+    background-color: var(--grey_lighter);
+    align-items: center;
+}
+
+
+/*Banner*/
+.banner{
+    background-color: var(--banner);
+    align-items: center;
+}
+
+.banner i{
+    color: var(--banner);
+}
+
+.banner .text_banner{
+    line-height: 1rem;
+}
+
+.search{
+    background-color: var(--grey_lighter);
+}
+
+.contacts_list{
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+.contact{
+    padding-left: 1rem;
+    line-height: 0.5rem;
+    width: 100%;
+    position: relative;
+}
+
+.time_contact{
+    font-size: .7rem;
+
+    position: absolute;
+    top: 2px;
+    right: 0;
+}
+
+.avatar:hover{
+    background-color: var(--grey_lighter);
+}
+
+/*Right*/
+.right{
+    background-image: url(../img/mine.jpg);
+}
+
+.box_message{
+    overflow-y: auto;
+    max-height: 450px;
+
+    width: 95%;
+    margin: auto;
+}
+
+.box{
+    width: 17rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.active_chat{
+    line-height: 0.5rem;
+}
+.time{
+    font-size: .7rem;
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+}
+
+footer{
+    width: 53%;
+    position: fixed;
+    bottom: 1rem;
+   
+    background-color: var(--bg_footer);
+}
