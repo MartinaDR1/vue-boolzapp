@@ -60,8 +60,9 @@
 
                             <div class="info_contact p-2">
                                 <h6><strong>{{contact.name}}</strong></h6>
-                                <span class="grey_dark fs-0_8">Ultimo messaggio inviato</span>
-                                <span class="grey_dark fs-0_8 time_contact">12:00</span>
+                                <span v-if="contacts[index].messages.length > 0" class="grey_dark fs-0_8">{{contact.messages[contact.messages.length -1].message}}<span>
+                            
+                                <span class="grey_dark fs-0_8 time_contact">{{contact.messages[contact.messages.length -1].date.slice(11,16)}}</span>
                             </div>
                         </div>
                     </div>
