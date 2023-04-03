@@ -32,7 +32,7 @@ img{
 
 .my_message{
     background-color: var(--my_message);
-    margin-left: 26rem;
+    margin-left: 22rem;
 }
 
 .riceved_message{
@@ -108,10 +108,11 @@ img{
 
     width: 95%;
     margin: auto;
+
 }
 
 .box{
-    width: 17rem;
+    width: 15rem;
     border-radius: 0.5rem;
     position: relative;
 }
@@ -135,6 +136,12 @@ footer{
     background-color: var(--bg_footer);
 }
 
+.my_dropdown button i{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+
 .dropdown-content{
     position: absolute;
     background-color: #f1f1f1;
@@ -142,8 +149,4 @@ footer{
     z-index: 1;
     
     inset: -23px 0 auto auto!important;
-}
- 
-::-webkit-scrollbar{
-    display: none;
 }
