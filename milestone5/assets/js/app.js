@@ -222,6 +222,9 @@ createApp({
             this.showMenu = !this.showMenu
 
         },
+        deleteMessage(i){
+            this.contacts[this.activeContact].messages.splice(i,1)
+        },
     }
     
 }).mount('#app')
