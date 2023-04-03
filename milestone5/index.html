@@ -95,15 +95,14 @@
                         
                         <span>{{element.message}}</span>
 
-                        <div class="dropdown">
+                        <div class="my_dropdown">
                             <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="border-0 bg-transparent">
                                 <i class="fa-solid fa-chevron-down fa-2xs "></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul class="dropdown-menu dropdown-content dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">Message Info</a></li>
                                 <li><a class="dropdown-item" href="#" @click="deleteMessage(index)">Delete Message</a></li>
                             </ul>
-
                         </div>
 
                         <span class="grey_dark time ">{{element.date.slice(11,16)}}</span>
