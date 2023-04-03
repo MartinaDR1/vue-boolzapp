@@ -28,6 +28,7 @@ createApp({
             activeContact:0,
             newMessage:'',
             search: '',
+            showMenu:false,
 
             contacts: [
                 {
@@ -217,7 +218,10 @@ createApp({
             }
             this.newMessage=''
         },
-       
+        showmenu() {
+            this.showMenu = !this.showMenu
+
+        },
     }
     
 }).mount('#app')

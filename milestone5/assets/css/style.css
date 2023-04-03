@@ -43,8 +43,7 @@ img{
     font-size: 0.8rem;
 }
 
-.avatar.active
-{
+.avatar.active{
 	background-color: var(--active_chat);
 }
 
@@ -120,6 +119,7 @@ img{
 .active_chat{
     line-height: 0.5rem;
 }
+
 .time{
     font-size: .7rem;
     position: absolute;
@@ -133,4 +133,8 @@ footer{
     bottom: 1rem;
    
     background-color: var(--bg_footer);
+}
+
+.dropdown-menu{
+    inset: -23px 0 auto auto!important;
 }

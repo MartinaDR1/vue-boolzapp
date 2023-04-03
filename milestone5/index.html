@@ -90,9 +90,24 @@
                 </header>
                 
                 <main class="box_message my-2">
-                    <div class="box p-2 mb-2" :class="element.status === 'sent' ? 'my_message' : 'riceved_message'" v-for="(element, index) in contacts[activeContact].messages"> 
+                    <div class="box p-2 mb-2  d-flex justify-content-between" :class="element.status === 'sent' ? 'my_message' : 'riceved_message'" v-for="(element, index) in contacts[activeContact].messages"> 
+                        
                         <span>{{element.message}}</span>
+
+                        <div class="dropdown">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="border-0 bg-transparent">
+                                <i class="fa-solid fa-chevron-down fa-2xs "></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Message Info</a></li>
+                                <li><a class="dropdown-item" href="#" @click="deleteMessage(message)">Delete Message</a></li>
+                            </ul>
+
+                        </div>
+
                         <span class="grey_dark time ">{{element.date.slice(11,16)}}</span>
+                        
+                    
                     </div>
 
                     <!-- 
