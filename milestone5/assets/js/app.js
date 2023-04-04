@@ -203,14 +203,14 @@ createApp({
         addNewMessage(){
             if(! this.newMessage == ''){
                 this.contacts[this.activeContact].messages.push({
-                    date: '10/01/2020 15:30:55',
+                    date: drNow,
                     message: this.newMessage,
                     status: 'sent'
                 })
 
                 this.aswer= setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
-                        date: '10/01/2020 15:30:55',
+                        date: drNow,
                         message: 'ok!',
                         status: 'received'
                     })
@@ -225,6 +225,13 @@ createApp({
         deleteMessage(i){
             this.contacts[this.activeContact].messages.splice(i,1)
         },
+        deleteMessages(i){
+            this.contacts[this.activeContact].messages.splice(i)
+        }
     }
     
 }).mount('#app')
+
+const dt = luxon.DateTime;
+const drNow= dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+console.log(drNow);
