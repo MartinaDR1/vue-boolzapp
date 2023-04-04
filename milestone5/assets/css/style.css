@@ -150,3 +150,16 @@ footer{
     
     inset: -23px 0 auto auto!important;
 }
+
+.offcanvas{
+    margin-left: 7rem;
+}
+
+.offcanvas-header,
+.item i{
+    background-color: rgb(120, 219, 120);
+}
+
+.offcanvas-body .item:hover{
+    background-color: rgb(240, 237, 237);
+}
