@@ -194,6 +194,17 @@ createApp({
                         }
                     ],
                 }
+            ],
+
+            randomAswers: [
+                "ok",
+                "A che ora torni?",
+                "Non mi va",
+                "A presto",
+                "Assolutamente si",
+                "Assolutamnte no",
+                "Forse",
+                "Ti farò sapere",
             ]
         }
     },
@@ -215,7 +226,7 @@ createApp({
                 setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
                         date: this.currentTime(),
-                        message: 'ok!',
+                        message: this.randomAswers[this.answer(0, this.randomAswers.length - 1)],
                         status: 'received'
                     })
                     this.contactWriting= false
@@ -249,7 +260,12 @@ createApp({
           
             return currentTime;
         
-        }
+        },
+        answer(min, max) {
+            randomNumber= Math.floor(Math.random() * (max - min + 1))
+
+            return randomNumber
+        }, 
     }
     
 }).mount('#app')
