@@ -29,7 +29,7 @@ createApp({
             newMessage:'',
             search: '',
             showMenu:false,
-
+            
             contacts: [
                 {
                     name: 'Michele',
@@ -203,14 +203,14 @@ createApp({
         addNewMessage(){
             if(! this.newMessage == ''){
                 this.contacts[this.activeContact].messages.push({
-                    date: drNow,
+                    date: this.currentTime(),
                     message: this.newMessage,
                     status: 'sent'
                 })
 
                 this.aswer= setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
-                        date: drNow,
+                        date: this.currentTime(),
                         message: 'ok!',
                         status: 'received'
                     })
@@ -230,11 +230,16 @@ createApp({
         },
         deleteChat(){
             this.contacts.splice(this.activeContact, 1)
+        },
+        currentTime(){
+            const dt = luxon.DateTime;
+            const dtNow= dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+            currentTime= dtNow.slice(10,15)
+          
+            return currentTime;
+        
         }
     }
     
 }).mount('#app')
 
-const dt = luxon.DateTime;
-const drNow= dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
-console.log(drNow);

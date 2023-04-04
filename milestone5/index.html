@@ -79,7 +79,7 @@
 
                         <div class="active_chat" >
                             <h6>{{contacts[activeContact].name}}</h6>
-                            <span class="fs-0_8 grey_dark">Ultimo accesso oggi alle 12:00</span>
+                            <span class="fs-0_8 grey_dark" >Ultimo accesso oggi alle {{currentTime()}}</span>
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@
                             </ul>
                         </div>
 
-                        <span class="grey_dark time mx-1">{{element.date.slice(11,16)}}</span>
+                        <span class="grey_dark time mx-1">{{element.date.slice(11,16) }}</span>
                         
                     
                     </div>
