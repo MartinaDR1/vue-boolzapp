@@ -227,6 +227,9 @@ createApp({
         },
         deleteMessages(i){
             this.contacts[this.activeContact].messages.splice(i)
+        },
+        deleteChat(){
+            this.contacts.splice(this.activeContact, 1)
         }
     }
     

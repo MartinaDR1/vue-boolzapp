@@ -88,8 +88,8 @@
                         <i class="fa-solid fa-paperclip mx-2"></i>
                         <button class="border-0 bg-transparent grey_dark" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical mx-2"></i></button>
                         <ul class="dropdown-menu dropdown-content dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#"@click="deleteMessages(index)">Delete messages</a></li>
-                            <li><a class="dropdown-item" href="#" >Delete chat</a></li>
+                            <li><a class="dropdown-item" href="#" @click="deleteMessages(index)">Delete messages</a></li>
+                            <li><a class="dropdown-item" href="#" @click="deleteChat()">Delete chat</a></li>
                         </ul>
                     </div>
                 </header>
