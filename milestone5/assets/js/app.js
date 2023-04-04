@@ -29,7 +29,9 @@ createApp({
             newMessage:'',
             search: '',
             showMenu:false,
-            
+            contactWriting: false,
+            contactOnline : false,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -208,15 +210,24 @@ createApp({
                     status: 'sent'
                 })
 
-                this.aswer= setTimeout(() => {
+                this.contactWriting= true
+                
+                setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
                         date: this.currentTime(),
                         message: 'ok!',
                         status: 'received'
                     })
-                }, 1000);
+                    this.contactWriting= false
+                    this.contactOnline= true
+                }, 4000);
+                
             }
             this.newMessage=''
+
+            setTimeout(() => {
+                this.contactOnline= false
+            }, 8000)
         },
         showmenu() {
             this.showMenu = !this.showMenu

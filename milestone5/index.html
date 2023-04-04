@@ -79,7 +79,9 @@
 
                         <div class="active_chat" >
                             <h6>{{contacts[activeContact].name}}</h6>
-                            <span class="fs-0_8 grey_dark" >Ultimo accesso oggi alle {{currentTime()}}</span>
+                            <span class="fs-0_8 grey_dark" v-if="contactWriting == false && contactOnline == false">Ultimo accesso oggi alle {{currentTime()}}</span>
+                            <span class="fs-0_8 text-success" :class="contactWriting === true ? 'd-block' : 'd-none'">sta scrivendo...</span>
+                            <span  class="fs-0_8 grey_dark" :class="contactOnline === true ? 'd-block' : 'd-none'">Online</span>
                         </div>
                     </div>
 
