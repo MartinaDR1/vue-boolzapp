@@ -28,6 +28,7 @@ createApp({
             activeContact:0,
             newMessage:'',
             search: '',
+            darkMode: false,
             showMenu:false,
             contactWriting: false,
             contactOnline : false,
@@ -214,9 +215,10 @@ createApp({
             this.activeContact = index
         },
         addNewMessage(){
+            const dt = luxon.DateTime;
             if(! this.newMessage == ''){
                 this.contacts[this.activeContact].messages.push({
-                    date: this.currentTime(),
+                    date: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                     message: this.newMessage,
                     status: 'sent'
                 })
@@ -225,7 +227,7 @@ createApp({
                 
                 setTimeout(() => {
                     this.contacts[this.activeContact].messages.push({
-                        date: this.currentTime(),
+                        date: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                         message: this.randomAswers[this.answer(0, this.randomAswers.length - 1)],
                         status: 'received'
                     })

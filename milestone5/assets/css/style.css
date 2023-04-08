@@ -75,7 +75,7 @@ img{
 
 .contacts_list{
     overflow-y: auto;
-    max-height: 450px;
+    height: calc(100% - 180px);
 }
 
 .contact{
@@ -100,11 +100,12 @@ img{
 /*Right*/
 .right{
     background-image: url(../img/mine.jpg);
+    position: relative;  /
 }
 
 .box_message{
     overflow-y: auto;
-    max-height: 450px;
+    height: calc(100% - 150px);
 
     width: 95%;
     margin: auto;
@@ -129,10 +130,6 @@ img{
 }
 
 footer{
-    width: 53%;
-    position: fixed;
-    bottom: 1rem;
-   
     background-color: var(--bg_footer);
 }
 
